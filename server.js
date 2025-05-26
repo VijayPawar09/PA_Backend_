@@ -19,7 +19,11 @@ const app = express();
 
 
 // Configure middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://personalassistance.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true // only if you're using cookies or auth headers
+}));
 app.use(bodyParser.json());
 
 // Connect to MongoDB
