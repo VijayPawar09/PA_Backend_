@@ -6,10 +6,7 @@ const AssistantSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  experience: {
-    type: String,
-    required: true
-  },
+  
   specializations: {
     type: [String],
     required: true
